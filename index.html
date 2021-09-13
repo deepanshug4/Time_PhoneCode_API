@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <!-- Image and text -->
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      Time Zones and Country Codes
+    </a>
+  </nav>
+  <div class="row m-4 p-4">
+    <div class="col ml-5 mr-5">
+      <form method="GET" action="http://127.0.0.1:5000/" id="search-form">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Country Name</label>
+          <input type="text" class="form-control" id="exampleInputCountryName" aria-describedby="Countryhelp"
+            placeholder="Enter Country Name">
+          <small id="Countryhelp" class="form-text text-muted">Please enter the full name of the Country.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Example select</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option value="code">Phone Code</option>
+            <option value="time">Time Zone</option>
+          </select>
+        </div>
+        <button type="submit" onclick="url_func()">Search</button>
+    </div>
+    </form>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script>
+    function url_func(){
+      console.log("dcvnosdznvds");
+      var action = document.getElementById('exampleFormControlSelect1').value;
+      var txt = document.getElementById('exampleInputCountryName').value;
+      $("#search-form").attr("action", "http://127.0.0.1:5000/" + action + "/" + txt );
+    }
+    
+  </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
